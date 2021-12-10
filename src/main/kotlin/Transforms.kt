@@ -20,6 +20,7 @@ class Transforms {
         val charToDigits = StringBuilder()
         for (i in text.indices) {
             if (text[i] == '_') charToDigits.append("0${(text[i].code).toString(2)}")
+            if (text[i] == ' ') charToDigits.append("00${(text[i].code).toString(2)}")
             else charToDigits.append((text[i].code - 848).toString(2))
         }
         return charToDigits.toString()

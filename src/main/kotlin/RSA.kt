@@ -6,10 +6,10 @@ class RSA(p: BigInteger, q: BigInteger) {
     private val phi: BigInteger = (p- BigInteger.ONE)*(q- BigInteger.ONE)
     private var e = publicExp()
     private var d = e.modInverse(phi)
-    fun D(): BigInteger {
+    fun getD(): BigInteger {
         return d
     }
-    fun E(): BigInteger {
+    fun getE(): BigInteger {
         return e
     }
     private fun publicExp(): BigInteger {
